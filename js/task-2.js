@@ -1,5 +1,5 @@
 const getUsersWithFriend = (users, friendName) => {
-    return users.filter(user => book.friends.indexOf(friendName) !== -1);
+    return users.filter(user => user.friends.indexOf(friendName) !== -1);
 };
 
 
@@ -59,3 +59,4 @@ console.log(getUsersWithFriend(allUsers, "Goldie Gentry"));
 // ]
 
 console.log(getUsersWithFriend(allUsers, "Adrian Cross" )); // []
+console.log("-----------------END TASK 2-------------------")
