@@ -23,5 +23,5 @@ const books = [
 ];
 const MIN_BOOK_RATING = 8;
 
-const names = books;
+const names = books.filter(books.rating>MIN_BOOK_RATING);
 console.log(names);
