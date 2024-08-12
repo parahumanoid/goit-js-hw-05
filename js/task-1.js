@@ -23,4 +23,5 @@ const books = [
 ];
 const MIN_BOOK_RATING = 8;
 
-const names = books.filter(books.rating>MIN_BOOK_RATING).map(book.author).toSorted();
+const names = books;
+console.log(names);
