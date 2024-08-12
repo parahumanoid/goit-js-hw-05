@@ -1,29 +1,41 @@
-const books = [
+getUserNames(users) => { return users.map(user.name) };
+console.log(
+  getUserNames([
   {
-    title: "The Last Kingdom",
-    author: "Bernard Cornwell",
-    rating: 8.38,
+    name: "Moore Hensley",
+    email: "moorehensley@indexia.com",
+    balance: 2811
   },
   {
-    title: "Beside Still Waters",
-    author: "Robert Sheckley",
-    rating: 8.51,
+    name: "Sharlene Bush",
+    email: "sharlenebush@tubesys.com",
+    balance: 3821
   },
   {
-    title: "The Dream of a Ridiculous Man",
-    author: "Fyodor Dostoevsky",
-    rating: 7.75,
+    name: "Ross Vazquez",
+    email: "rossvazquez@xinware.com",
+    balance: 3793
   },
-  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
   {
-    title: "The Dreams in the Witch House",
-    author: "Howard Lovecraft",
-    rating: 8.67,
+    name: "Elma Head",
+    email: "elmahead@omatom.com",
+    balance: 2278
   },
-];
-const MIN_BOOK_RATING = 8;
-
-const names = books.filter(book => book.rating > MIN_BOOK_RATING).map(book => book.author).toSorted((a,b) => a.localeCompare(b));
-console.log(names);
-
-// .map(book.author).toSorted()
+  {
+    name: "Carey Barr",
+    email: "careybarr@nurali.com",
+    balance: 3951
+  },
+  {
+    name: "Blackburn Dotson",
+    email: "blackburndotson@furnigeer.com",
+    balance: 1498
+  },
+  {
+    name: "Sheree Anthony",
+    email: "shereeanthony@kog.com",
+    balance: 2764
+  },
+])
+); // ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
+console.log("-----------------END TASK 1-------------------")
