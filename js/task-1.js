@@ -1,23 +1,13 @@
-function isEnoughCapacity(products, containerSize) {
-    let total = 0;
-    for (const item in products)
-        total += products[item];
-    return (total <= containerSize);
-}
+const students = [
+  { name: "Mango", score: 83, courses: ["mathematics", "physics"] },
+  { name: "Poly", score: 59, courses: ["science", "mathematics"] },
+  { name: "Ajax", score: 37, courses: ["physics", "biology"] },
+  { name: "Kiwi", score: 94, courses: ["literature", "science"] },
+];
 
-console.log(
-  isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)
-); // true
+const uniqueSortedCourses = students
+  .flatMap(student => student.courses)
+  .filter((course, index, array) => { console.log(course);  return array.indexOf(course) === index })
+  .toSorted((a, b) => a.localeCompare(b));
 
-console.log(
-  isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)
-); // false
-
-console.log(
-  isEnoughCapacity({ apples: 1, lime: 5, tomatoes: 3 }, 14)
-); // true
-
-console.log(
-  isEnoughCapacity({ apples: 18, potatoes: 5, oranges: 2 }, 7)
-); // false
-console.log(`-------------------- END OF TASK 1 -----------------------`);
+console.log(uniqueSortedCourses); // ["biology", "science", "literature", "mathematics", "physics"]
