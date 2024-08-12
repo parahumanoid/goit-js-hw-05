@@ -23,7 +23,7 @@ const books = [
 ];
 const MIN_BOOK_RATING = 8;
 
-const names = books.filter(book => book.rating > MIN_BOOK_RATING).map(book => book.author);
+const names = books.filter(book => book.rating > MIN_BOOK_RATING).map(book => book.author).toSorted((a,b) => a.localeCompare(b));
 console.log(names);
 
 // .map(book.author).toSorted()
